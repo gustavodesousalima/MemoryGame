@@ -5,7 +5,7 @@ const HomeScreen = ({ navigation }: any) => {
   return (
     <View style={styles.container}>
       <Image 
-        source={require('../assets/logo.png')} // Substitua pelo caminho correto da sua imagem
+        source={require('../assets/logo.png')}
         style={styles.logo}
       />
       <View style={styles.containerDown}>

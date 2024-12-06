@@ -47,16 +47,16 @@ const Card: React.FC<CardProps> = ({
 
 const styles = StyleSheet.create({
   card: {
-    width: 82,
-    height: 160,
-    margin: 5,
+    width: 95,
+    height: 170,
+    margin: 2,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#fccb55',
     borderRadius: 8,
   },
   flipped: {
-    backgroundColor: '#4793ff',
+    backgroundColor: '#6997FA',
   },
   marked: {
     borderColor: '#FFD700',
@@ -67,10 +67,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   cardText: {
-    fontSize: 8,
+    fontSize: 14,
     color: '#fff',
     textAlign: 'center',
     padding: 4,
+    fontWeight: 'bold',
   },
   cardTextatras: {
     fontSize: 36,

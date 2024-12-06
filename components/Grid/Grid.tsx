@@ -118,18 +118,16 @@ const Grid: React.FC<GridProps> = ({ onCardClick, onDoubleClick }) => {
   const [initialFlip, setInitialFlip] = useState(true);
   const [showModal, setShowModal] = useState(false);
 
-  // Temporizador principal (apenas uma instância do interval)
   useEffect(() => {
-    if (gameOver || timer === 0) return; // Não faz nada se o jogo acabou ou o tempo acabou
+    if (gameOver || timer === 0) return;
 
     const interval = setInterval(() => {
       setTimer((prevTimer) => prevTimer - 1);
-    }, 1000); // 1 segundo de intervalo
+    }, 1000);
 
-    return () => clearInterval(interval); // Limpa o interval quando o componente for desmontado
+    return () => clearInterval(interval);
   }, [timer, gameOver]);
 
-  // Mostrar todas as cartas inicialmente por 15 segundos
   useEffect(() => {
     if (initialFlip) {
       const flipTimer = setTimeout(() => setInitialFlip(false), 15000);
@@ -138,9 +136,9 @@ const Grid: React.FC<GridProps> = ({ onCardClick, onDoubleClick }) => {
   }, [initialFlip]);
 
   useEffect(() => {
-    if (timer === 0 || matches === allCards.length / 2) {
+    if (timer === 0 || matchedCards.length === stateCards.length) {
       setGameOver(true);
-      setShowModal(true); // Exibe o pop-up
+      setShowModal(true);
     }
   }, [timer, matches]);
 
@@ -204,7 +202,7 @@ const Grid: React.FC<GridProps> = ({ onCardClick, onDoubleClick }) => {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={styles.containerGameOver}>
       {gameOver ? (
         <Modal
           transparent={true}
@@ -214,7 +212,7 @@ const Grid: React.FC<GridProps> = ({ onCardClick, onDoubleClick }) => {
         >
           <View style={styles.modalBackground}>
             <View style={styles.modalContent}>
-              <Text style={styles.modalText}>O Tempo Acabou! Score: {score}</Text>
+              <Text style={styles.modalText}>Fim de jogo! Score: {score}</Text>
               <TouchableOpacity style={styles.button} onPress={goToHome}>
                 <Text style={styles.buttonText}>Voltar para a Home</Text>
               </TouchableOpacity>
@@ -225,10 +223,10 @@ const Grid: React.FC<GridProps> = ({ onCardClick, onDoubleClick }) => {
           </View>
         </Modal>
       ) : (
-        <>
+        <View style={styles.containerPrincipal}>
           <View style={styles.status}>
-            <Text style={styles.statusText}>Score: {score}</Text>
-            <Text style={styles.statusText}>Time: {Math.floor(timer / 60)}:{String(timer % 60).padStart(2, '0')}</Text>
+            <Text style={styles.statusText}><Text style={styles.desc}>Score:</Text> {score}</Text>
+            <Text style={styles.statusText}><Text style={styles.desc}>Time:</Text> {Math.floor(timer / 60)}:{String(timer % 60).padStart(2, '0')}</Text>
           </View>
           <View style={styles.grid}>
             {stateCards.map(card => (
@@ -243,7 +241,7 @@ const Grid: React.FC<GridProps> = ({ onCardClick, onDoubleClick }) => {
               />
             ))}
           </View>
-        </>
+        </View>
       )}
     </View>
   );
@@ -251,25 +249,50 @@ const Grid: React.FC<GridProps> = ({ onCardClick, onDoubleClick }) => {
 
 const styles = StyleSheet.create({
   container: {
+    display: 'flex',
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     alignItems: 'center',
-    paddingTop: 5,
+    paddingTop: 15,
   },
+
+  desc: {
+    fontWeight: 'bold',
+    color: '#FADF48',
+  },
+
+  containerPrincipal: {
+    display: 'flex',
+    flex: 1,
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    paddingTop: 15,
+  },
+
+  containerGameOver: {},
   status: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    width: '100%',
+    width: '90%',
     marginBottom: 20,
+    backgroundColor: '#4393fb',
+    padding: 10,
+    textAlign: 'center',
+    borderRadius: 5,
   },
   statusText: {
-    fontSize: 20,
+    fontSize: 26,
     fontWeight: 'bold',
+    display: 'flex',
+    width: '35%',
+    color: 'white',
   },
   grid: {
+    display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
+    alignItems: 'center',
     width: '100%',
   },
   gameOverText: {
@@ -291,8 +314,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   modalText: {
-    fontSize: 20,
+    fontSize: 26,
     marginBottom: 20,
+    fontWeight: 'bold',
   },
   button: {
     backgroundColor: '#4393fb',
@@ -304,7 +328,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: 'white',
-    fontSize: 16,
+    fontSize: 18,
   },
 });
 

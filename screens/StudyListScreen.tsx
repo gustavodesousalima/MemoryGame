@@ -24,11 +24,11 @@ const SavedCardsPage: React.FC = () => {
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
           <View style={styles.card}>
-            <Text style={styles.text}>Tema: {item.concept}</Text>
-            <Text style={styles.text}>Definição: {item.definition}</Text>
+            <Text style={styles.text}><Text style={styles.textdesc}>Tema: </Text> {item.concept}</Text>
+            <Text style={styles.text}><Text style={styles.textdesc}>Definição: </Text> {item.definition}</Text>
           </View>
         )}
-        contentContainerStyle={styles.listContent} // Adiciona estilo ao conteúdo da lista
+        contentContainerStyle={styles.listContent}
       />
     </View>
   );
@@ -36,7 +36,7 @@ const SavedCardsPage: React.FC = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1, // Garante que o contêiner ocupe todo o espaço disponível
+    flex: 1,
     padding: 20,
     backgroundColor: '#f5f5f5',
   },
@@ -67,8 +67,12 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   listContent: {
-    paddingBottom: 20, // Adiciona espaço no final da lista para garantir que o último item não fique cortado
+    paddingBottom: 20,
   },
+  textdesc: {
+    fontWeight: 'bold',
+    color: '#FADF48',
+  }
 });
 
 export default SavedCardsPage;
