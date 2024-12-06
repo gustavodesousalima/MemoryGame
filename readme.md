@@ -58,9 +58,28 @@ npx expo start
 
 ## Tela de Carregamento do Jogo
 
+### Assim que o jogo for iniciado, você será redirecionado para a tela de carregamento.
+
 <img src="./assets/init.jpg" alt="Captura de Tela do Jogo" width="200" height="400">
 
+
 ## Tela Inicial do Jogo
+
+### Após a tela de carregamento, você será redirecionado para a tela inicial do jogo onde temos as opções de iniciar o jogo ou ir para a lista de cards para estudar.
+
+<img src="./assets/homegame.jpg" alt="Captura de Tela do Jogo" width="200" height="400">
+
+
+## Aba com Lista de Cards para Estudar
+
+### Aba com a lista de cards para estudar"
+
+<img src="./assets/liststudy.jpg" alt="Captura de Tela do Jogo" width="200" height="400">
+
+
+## Aba do Jogo
+
+### Na tela inicial do jogo, os cards são renderizados com o conteúdo visível, permitindo que o usuário memorize os pares por 15 segundos. Após esse período, os cards são virados para baixo, ocultando o conteúdo. Para formar uma combinação, o usuário deve clicar em um card e, em seguida, tentar lembrar e selecionar o card correspondente ao seu par.
 
 <img src="./assets/initgame.jpg" alt="Captura de Tela do Jogo" width="200" height="400">
 
