@@ -1,50 +1,86 @@
-# Memory Game
+# CodeCraft 🧠  
+**CodeCraft** é um jogo de memória interativo desenvolvido em **React Native**, **Expo** e **TypeScript**. O objetivo do jogo é combinar pares de conceitos e definições de JavaScript, ajudando os jogadores a aprender enquanto se divertem.
 
-Este é um jogo de memória desenvolvido utilizando React Native com Expo. O objetivo do jogo é combinar os conceitos e definições de JavaScript, virando as cartas e tentando encontrar os pares corretos.
+## 🎮 Funcionalidades  
+- **Jogo de Memória**: Combine conceitos e definições de JavaScript, virando cartas e encontrando pares.  
+- **Marcar para Estudo**: Dê um **duplo clique** nas cartas para salvá-las e revisá-las posteriormente.  
+- **Pontuação e Temporizador**: Acompanhe sua pontuação e o tempo restante durante a partida.  
+- **Design Responsivo**: Compatível com dispositivos móveis e emuladores de Android/iOS.  
 
-## Pré-requisitos
+---
 
-Antes de começar, você precisará ter os seguintes itens instalados:
+## 🚀 Tecnologias Utilizadas  
+- **React Native**: Biblioteca para desenvolvimento mobile.  
+- **Expo**: Framework para simplificar o ambiente React Native.  
+- **TypeScript**: Para um desenvolvimento mais seguro e tipado.  
+- **React Navigation**: Gerenciamento de navegação entre telas.  
+- **Async Storage**: Armazenamento local para salvar cartas marcadas para estudo.
 
-- [Node.js](https://nodejs.org/) (versão 14 ou superior)
-- [Expo CLI](https://docs.expo.dev/get-started/installation/) (caso não tenha o Expo CLI, instale-o com o comando: `npm install -g expo-cli`)
-- [Git](https://git-scm.com/)
+---
 
-## Como rodar o projeto localmente
+## 📋 Pré-requisitos  
+Antes de começar, certifique-se de ter os itens abaixo instalados:  
+- [Node.js](https://nodejs.org/) (versão 14 ou superior).  
+- [Expo CLI](https://docs.expo.dev/get-started/installation/) (instale com: `npm install -g expo-cli`).  
+- [Git](https://git-scm.com/).  
 
-### Passo 1: Clonar o repositório
+---
 
-Primeiro, clone o repositório para a sua máquina local:
+## 🛠️ Como Rodar o Projeto Localmente  
 
-```bash
+### 1️⃣ Clonar o Repositório  
+
 git clone https://github.com/seu-usuario/memory-game.git
-cd memory-game
+
+### 2️⃣ Entrar na Pasta do Projeto
+
+cd MemoryGame
+
+### 3️⃣ Instalar Dependências
+
 npm install
-npm install -g expo-cli
+
+### 4️⃣ Iniciar o Projeto
+
 npx expo start
 
-## Como Rodar o Aplicativo
+## 📱 Executar no Dispositivo  
 
-Após rodar o comando `npx expo start`, será aberta uma página no navegador com um QR code. Para visualizar o aplicativo em execução no seu dispositivo móvel, escaneie o QR code utilizando o aplicativo **Expo Go** (disponível para download na [App Store](https://apps.apple.com/) e [Google Play](https://play.google.com/)).
+1. Após rodar o comando `npx expo start`, um **QR Code** será exibido no terminal ou na interface do Expo.  
+2. Abra o aplicativo **Expo Go** no seu dispositivo móvel e escaneie o QR Code para iniciar o jogo.  
+   - **iOS**: [Baixar na App Store](https://apps.apple.com/).  
+   - **Android**: [Baixar na Google Play](https://play.google.com/).  
+3. Para rodar o projeto em um emulador:  
+   - Configure um **emulador Android/iOS** no seu ambiente local.  
+   - Escolha a opção correspondente no terminal do Expo.  
 
-Se preferir, você também pode rodar o projeto em um emulador de Android ou iOS.
+---
 
-## Funcionalidades
-
-- **Jogo de Memória**: Combine os conceitos e definições de JavaScript, virando as cartas.
-- **Marcar para Estudo**: Ao dar um duplo clique nas cartas, você pode salvá-las para revisar depois.
-- **Pontuação e Tempo**: Acompanhe a pontuação e o tempo restante durante o jogo.
-
-## Estrutura do Projeto
-
-A estrutura do projeto está organizada da seguinte forma:
+![Logo do Projeto](assets\init.jpg)
 
 
-## Dependências
+### 🏗️ Estrutura do Projeto
 
-As principais dependências do projeto são:
+O projeto foi desenvolvido com o conceito de componentização, facilitando a manutenção e a escalabilidade.
 
-- `expo`: Framework React Native baseado no Expo.
-- `react-navigation`: Navegação entre as telas do aplicativo.
-- `@react-native-async-storage/async-storage`: Para armazenar as cartas salvas para estudo.
-- `react-native`: Biblioteca principal para desenvolvimento de aplicativos móveis.
+### Estrutura de Pastas
+
+├───assets/
+├───components/
+│   ├── Card/
+│   ├── Grid/
+│   ├── Header/
+├── screens/
+│   ├── GameScreen/
+│   ├── HomeScreen/
+│   ├── StudyListScreen/
+├── App.tsx
+
+---
+
+## 📦 Dependências Principais  
+
+- **`expo`**: Framework para desenvolvimento React Native.  
+- **`react-navigation`**: Gerenciamento de navegação entre telas.  
+- **`@react-native-async-storage/async-storage`**: Armazenamento local para recursos persistentes.  
+- **`react-native`**: Biblioteca base para o desenvolvimento mobile.  
