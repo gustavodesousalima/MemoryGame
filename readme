@@ -1,0 +1,50 @@
+# Memory Game
+
+Este é um jogo de memória desenvolvido utilizando React Native com Expo. O objetivo do jogo é combinar os conceitos e definições de JavaScript, virando as cartas e tentando encontrar os pares corretos.
+
+## Pré-requisitos
+
+Antes de começar, você precisará ter os seguintes itens instalados:
+
+- [Node.js](https://nodejs.org/) (versão 14 ou superior)
+- [Expo CLI](https://docs.expo.dev/get-started/installation/) (caso não tenha o Expo CLI, instale-o com o comando: `npm install -g expo-cli`)
+- [Git](https://git-scm.com/)
+
+## Como rodar o projeto localmente
+
+### Passo 1: Clonar o repositório
+
+Primeiro, clone o repositório para a sua máquina local:
+
+```bash
+git clone https://github.com/seu-usuario/memory-game.git
+cd memory-game
+npm install
+npm install -g expo-cli
+npx expo start
+
+## Como Rodar o Aplicativo
+
+Após rodar o comando `npx expo start`, será aberta uma página no navegador com um QR code. Para visualizar o aplicativo em execução no seu dispositivo móvel, escaneie o QR code utilizando o aplicativo **Expo Go** (disponível para download na [App Store](https://apps.apple.com/) e [Google Play](https://play.google.com/)).
+
+Se preferir, você também pode rodar o projeto em um emulador de Android ou iOS.
+
+## Funcionalidades
+
+- **Jogo de Memória**: Combine os conceitos e definições de JavaScript, virando as cartas.
+- **Marcar para Estudo**: Ao dar um duplo clique nas cartas, você pode salvá-las para revisar depois.
+- **Pontuação e Tempo**: Acompanhe a pontuação e o tempo restante durante o jogo.
+
+## Estrutura do Projeto
+
+A estrutura do projeto está organizada da seguinte forma:
+
+
+## Dependências
+
+As principais dependências do projeto são:
+
+- `expo`: Framework React Native baseado no Expo.
+- `react-navigation`: Navegação entre as telas do aplicativo.
+- `@react-native-async-storage/async-storage`: Para armazenar as cartas salvas para estudo.
+- `react-native`: Biblioteca principal para desenvolvimento de aplicativos móveis.
