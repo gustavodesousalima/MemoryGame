@@ -30,7 +30,7 @@ Antes de começar, certifique-se de ter os itens abaixo instalados:
 
 ### 1️⃣ Clonar o Repositório  
 
-git clone https://github.com/seu-usuario/memory-game.git
+git clone https://github.com/gustavodesousalima/MemoryGame.git
 
 ### 2️⃣ Entrar na Pasta do Projeto
 
