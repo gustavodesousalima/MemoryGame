@@ -225,8 +225,8 @@ const Grid: React.FC<GridProps> = ({ onCardClick, onDoubleClick }) => {
       ) : (
         <View style={styles.containerPrincipal}>
           <View style={styles.status}>
-            <Text style={styles.statusText}><Text style={styles.desc}>Score:</Text> {score}</Text>
-            <Text style={styles.statusText}><Text style={styles.desc}>Time:</Text> {Math.floor(timer / 60)}:{String(timer % 60).padStart(2, '0')}</Text>
+            <Text style={styles.statusText}><Text style={styles.desc}>Score: </Text> {score}</Text>
+            <Text style={styles.statusText}><Text style={styles.desc}>Time: </Text> {Math.floor(timer / 60)}:{String(timer % 60).padStart(2, '0')}</Text>
           </View>
           <View style={styles.grid}>
             {stateCards.map(card => (
@@ -251,7 +251,7 @@ const styles = StyleSheet.create({
   container: {
     display: 'flex',
     flex: 1,
-    justifyContent: 'space-around',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     paddingTop: 15,
   },
@@ -264,9 +264,10 @@ const styles = StyleSheet.create({
   containerPrincipal: {
     display: 'flex',
     flex: 1,
-    justifyContent: 'space-around',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     paddingTop: 15,
+    gap: 20,
   },
 
   containerGameOver: {},
