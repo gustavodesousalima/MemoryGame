@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
-import Header from '../components/Header/Header';
 import Grid from '../components/Grid/Grid';
 import { cards } from '../data/Card';
 
@@ -15,7 +14,6 @@ const GameScreen = () => {
 
   return (
     <SafeAreaView style={styles.app}>
-      <Header />
       <Grid cards={gameCards} onCardClick={handleCardClick} onDoubleClick={handleDoubleClick} />
     </SafeAreaView>
   );

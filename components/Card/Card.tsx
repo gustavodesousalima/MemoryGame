@@ -38,7 +38,7 @@ const Card: React.FC<CardProps> = ({
         {flipped ? (
           <Text style={styles.cardText}>{showConcept ? concept : definition}</Text>
         ) : (
-          <Text style={styles.cardText}>?</Text>
+          <Text style={styles.cardTextatras}>?</Text>
         )}
       </View>
     </TouchableOpacity>
@@ -47,16 +47,16 @@ const Card: React.FC<CardProps> = ({
 
 const styles = StyleSheet.create({
   card: {
-    width: 120,
-    height: 220,
+    width: 82,
+    height: 160,
     margin: 5,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#fccb55',
     borderRadius: 8,
   },
   flipped: {
-    backgroundColor: '#F44336',
+    backgroundColor: '#4793ff',
   },
   marked: {
     borderColor: '#FFD700',
@@ -67,7 +67,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   cardText: {
-    fontSize: 14,
+    fontSize: 8,
+    color: '#fff',
+    textAlign: 'center',
+    padding: 4,
+  },
+  cardTextatras: {
+    fontSize: 36,
     color: '#fff',
     textAlign: 'center',
   },

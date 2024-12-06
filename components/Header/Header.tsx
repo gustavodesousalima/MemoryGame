@@ -3,7 +3,6 @@ import { View, Text, StyleSheet } from 'react-native';
 
 const Header = () => (
   <View style={styles.header}>
-    <Text style={styles.title}>Jogo de Memória</Text>
   </View>
 );
 

@@ -18,7 +18,7 @@ const SavedCardsPage: React.FC = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Saved Cards</Text>
+      <Text style={styles.title}>Cards para Estudos</Text>
       <FlatList
         data={savedCards}
         keyExtractor={(item, index) => index.toString()}
@@ -28,6 +28,7 @@ const SavedCardsPage: React.FC = () => {
             <Text style={styles.text}>Definição: {item.definition}</Text>
           </View>
         )}
+        contentContainerStyle={styles.listContent} // Adiciona estilo ao conteúdo da lista
       />
     </View>
   );
@@ -35,23 +36,38 @@ const SavedCardsPage: React.FC = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1, // Garante que o contêiner ocupe todo o espaço disponível
     padding: 20,
+    backgroundColor: '#f5f5f5',
   },
   title: {
-    fontSize: 24,
+    fontSize: 34,
     fontWeight: 'bold',
     marginBottom: 20,
+    color: '#ee9e5a',
+    textAlign: 'center',
   },
   card: {
-    padding: 10,
-    marginBottom: 10,
+    padding: 15,
+    marginBottom: 15,
     borderWidth: 1,
     borderColor: '#ddd',
-    borderRadius: 5,
+    borderRadius: 10,
+    backgroundColor: '#4393fb',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 3,
+    elevation: 5,
   },
   text: {
     fontSize: 16,
+    color: '#fff',
+    fontWeight: 'bold',
+    marginBottom: 5,
+  },
+  listContent: {
+    paddingBottom: 20, // Adiciona espaço no final da lista para garantir que o último item não fique cortado
   },
 });
 
