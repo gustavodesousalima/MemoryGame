@@ -83,6 +83,18 @@ npx expo start
 
 <img src="./assets/initgame.jpg" alt="Captura de Tela do Jogo" width="200" height="400">
 
+## Aba do Jogo em Andamento
+
+### Na aba do jogo podemos verificar a nossa pontuação e o tempo restante.
+
+<img src="./assets/game.jpg" alt="Captura de Tela do Jogo" width="200" height="400">
+
+## Jogo Finalizado
+
+### Para o o jogo terminar o tempo precisa chegar a zero ou o usuário precisar acertar todos os pares. Quando finalizar aparece um pop up com a pontuação e a opção de jogar novamente ou voltar para a tela inicial.
+
+<img src="./assets/finishgame.jpg" alt="Captura de Tela do Jogo" width="200" height="400">
+
 
 
 ### 🏗️ Estrutura do Projeto
