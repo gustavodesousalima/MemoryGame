@@ -56,7 +56,7 @@ npx expo start
 
 ---
 
-<img src="./assets/init.jpg" alt="Captura de Tela do Jogo" width="200" height="250">
+<img src="./assets/init.jpg" alt="Captura de Tela do Jogo" width="200" height="400">
 
 
 
