@@ -56,7 +56,13 @@ npx expo start
 
 ---
 
+## Tela de Carregamento do Jogo
+
 <img src="./assets/init.jpg" alt="Captura de Tela do Jogo" width="200" height="400">
+
+## Tela Inicial do Jogo
+
+<img src="./assets/initgame.jpg" alt="Captura de Tela do Jogo" width="200" height="400">
 
 
 
