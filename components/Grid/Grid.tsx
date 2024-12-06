@@ -273,7 +273,7 @@ const styles = StyleSheet.create({
   status: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    width: '90%',
+    width: '100%',
     marginBottom: 20,
     backgroundColor: '#4393fb',
     padding: 10,
@@ -281,7 +281,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   statusText: {
-    fontSize: 26,
+    fontSize: 20,
     fontWeight: 'bold',
     display: 'flex',
     width: '35%',

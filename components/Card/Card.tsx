@@ -48,7 +48,7 @@ const Card: React.FC<CardProps> = ({
 const styles = StyleSheet.create({
   card: {
     width: 95,
-    height: 170,
+    height: 150,
     margin: 2,
     justifyContent: 'center',
     alignItems: 'center',
