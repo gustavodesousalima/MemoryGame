@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   cardText: {
-    fontSize: 14,
+    fontSize: 10,
     color: '#fff',
     textAlign: 'center',
     padding: 4,

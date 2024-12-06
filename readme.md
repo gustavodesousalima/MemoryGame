@@ -72,7 +72,7 @@ npx expo start
 
 ## Aba com Lista de Cards para Estudar
 
-### Aba com a lista de cards para estudar"
+### Aba com a lista de cards para estudar
 
 <img src="./assets/liststudy.jpg" alt="Captura de Tela do Jogo" width="200" height="400">
 
