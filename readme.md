@@ -56,7 +56,8 @@ npx expo start
 
 ---
 
-<img src="./assets/init.jpg">
+<img src="./assets/init.jpg" alt="Captura de Tela do Jogo" width="400">
+
 
 
 ### 🏗️ Estrutura do Projeto
